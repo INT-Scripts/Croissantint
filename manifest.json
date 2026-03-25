@@ -1,0 +1,21 @@
+{
+  "short_name": "BananINT",
+  "name": "BananINT ! - Épluchez vos singes",
+  "description": "Un site qui permet d'éplucher vos singes qui laissent leur bananier sans surveillance ! Ils vous doivent un régime !",
+  "icons": [
+    {
+      "src": "banane.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FAFF00",
+  "background_color": "#FAFF00",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "lifestyle"],
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/"
+}

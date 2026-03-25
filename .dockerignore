@@ -1,0 +1,12 @@
+# Ignore git
+.git
+.gitignore
+
+# Ignore node_modules
+node_modules
+package-lock.json
+
+# Ignore scratch files
+analyze_css_structure.py
+*.md
+.DS_Store

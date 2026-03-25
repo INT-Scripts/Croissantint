@@ -1,0 +1,96 @@
+/* BananINT DA Overrides - Colors ONLY - V4 (Enlarged Banana + Black Text) */
+:root {
+  --color-banan-primary: #FAFF00;
+  --color-banan-black: #0B0B0B;
+  --color-banan-carbon: #000000;
+  --color-banan-dark-yellow: #bf9b00;
+}
+
+/* Force all text to black */
+* {
+    color: black !important;
+}
+
+body {
+    background-color: var(--color-banan-primary) !important;
+    accent-color: var(--color-banan-primary) !important;
+}
+
+/* Specific elements to ensure black text */
+input, select, textarea, button, a, h1, h2, h3, p, span, div, label, strong {
+    color: black !important;
+}
+
+/* Enlarge banana images */
+img.m-auto,
+section img[src*="banane.png"],
+.card img[src*="banane.png"],
+img[src*="banane.png"] {
+    width: 350px !important;
+    height: auto !important;
+    max-width: 95vw !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Backgrounds - Yellow where red/orange was used */
+.bg-red-500, .bg-red-600, .bg-red-700, [class*="bg-red-"], [class*="bg-orange-"] {
+    background-color: var(--color-banan-primary) !important;
+}
+
+.border-red-500, .border-red-600, .border-red-700, [class*="border-red-"], [class*="border-orange-"] {
+    border-color: var(--color-banan-primary) !important;
+}
+
+/* Specific selectors */
+.bg-linear-red {
+    background-image: linear-gradient(var(--color-banan-primary), var(--color-banan-dark-yellow)) !important;
+}
+
+/* Hover states for buttons */
+.hover\:bg-red-600:hover, 
+.hover\:bg-red-700:hover,
+button[class*="bg-red-"]:hover {
+    background-color: #f6ff4d !important;
+}
+
+/* Form elements focus */
+input:focus, select:focus, textarea:focus {
+    border-color: black !important;
+    outline-color: black !important;
+    --tw-ring-color: black !important;
+}
+
+/* SVGs - make them black or primary color */
+svg path[fill*="red"], 
+svg path[fill*="#ef4444"],
+svg circle[fill*="red"] {
+    fill: black !important;
+}
+
+/* Specifically for common logos/shapes in the original site */
+svg {
+    stroke: black !important;
+}
+
+/* Shadow overrides */
+[class*="shadow-red-"], 
+[class*="drop-shadow-red-"] {
+    --tw-shadow-color: rgba(0,0,0,0.5) !important;
+    --tw-drop-shadow: drop-shadow(0 0 10px rgba(0,0,0,0.5)) !important;
+}
+
+/* Force body background */
+#root, #root > div {
+    background-color: var(--color-banan-primary) !important;
+}
+
+/* Image overrides */
+[src*="croissant.svg"] {
+    content: url("/banane.png") !important;
+}
+
+[style*="croissant.svg"] {
+    background-image: url("/banane.png") !important;
+}

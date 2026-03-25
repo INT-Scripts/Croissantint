@@ -1,0 +1,9 @@
+{
+  "name": "bananint",
+  "version": "1.0.0",
+  "description": "BananINT - Épluchez vos singes et récoltez des régimes",
+  "author": "BananINT Team",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}

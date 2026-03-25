@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BANANINT — Maintenance</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root{
+      --bg-900: #0f1720; /* deep charcoal */
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #e6b800; /* banana-like accent */
+      --glass: rgba(255,255,255,0.06);
+      --shadow-sm: 0 6px 20px rgba(2,6,23,0.35);
+      --radius: 12px;
+      --max-width: 980px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing: border-box}
+
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg-900),#0b0e12);color:var(--muted);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+    header{background:transparent;padding:22px 20px}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
+
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand .logo{width:52px;height:52px;flex:0 0 52px;display:grid;place-items:center;border-radius:10px;background:linear-gradient(135deg,rgba(230,184,0,0.15),rgba(230,184,0,0.05))}
+    .brand svg{width:34px;height:34px;color:var(--accent)}
+    .brand h1{margin:0;font-size:1.05rem;color:var(--card);letter-spacing:0.6px}
+    .brand p{margin:0;font-size:0.78rem;color:var(--muted)}
+
+    main{display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 120px);padding:20px}
+
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:36px 36px;box-shadow:var(--shadow-sm);max-width:720px;width:100%;display:flex;gap:28px;align-items:center}
+
+    .visual{flex:0 0 110px;display:flex;align-items:center;justify-content:center}
+    .visual .badge{width:88px;height:88px;border-radius:18px;background:linear-gradient(135deg,#0f1720,#121421);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 18px rgba(0,0,0,0.25),0 8px 30px rgba(2,6,23,0.45)}
+    .visual svg{width:56px;height:56px}
+
+    .content{flex:1}
+    h2{margin:0 0 8px;font-size:1.45rem;color:var(--card);line-height:1.1}
+    p.lead{margin:0 0 14px;color:var(--muted);font-size:1rem}
+    p.muted{margin:0;color:var(--muted);font-size:0.9rem}
+
+
+    @media (max-width:720px){
+      .card{flex-direction:column;gap:18px;padding:22px}
+      .visual{order:-1}
+      .visual .badge{width:76px;height:76px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple banana glyph, decorative -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="lucide lucide-banana w-12 h-12 text-yellow-900" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 13c3.5-2 8-2 10 2a5.5 5.5 0 0 1 8 5"></path>
+            <path d="M5.15 17.89c5.52-1.52 8.65-6.89 7-12C11.55 4 11.5 2 13 2c3.22 0 5 5.5 5 8 0 6.5-4.2 12-10.49 12C5.11 22 2 22 2 20c0-1.5 1.14-1.55 3.15-2.11Z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>BANANINT</h1>
+          <p>Club de Télécom SudParis</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="card" role="status" aria-live="polite">
+        <div class="visual">
+          <div class="badge" aria-hidden="true">
+            <!-- refined banana SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="lucide lucide-banana w-12 h-12 text-yellow-900" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 13c3.5-2 8-2 10 2a5.5 5.5 0 0 1 8 5"></path>
+              <path d="M5.15 17.89c5.52-1.52 8.65-6.89 7-12C11.55 4 11.5 2 13 2c3.22 0 5 5.5 5 8 0 6.5-4.2 12-10.49 12C5.11 22 2 22 2 20c0-1.5 1.14-1.55 3.15-2.11Z"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="content">
+          <h2>Maintenance en cours</h2>
+          <p class="lead">Nous effectuons une mise à jour importante. Le site est momentanément indisponible.</p>
+          <p class="muted">Nous faisons notre possible pour revenir rapidement. Merci pour votre patience — n'hésitez pas à réessayer dans quelques heures.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

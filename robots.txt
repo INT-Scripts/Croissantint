@@ -1,0 +1,21 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /static/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://bananint.fr/sitemap.xml
+
+# Bots spécifiques
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay pour les bots
+Crawl-delay: 1
