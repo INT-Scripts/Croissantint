@@ -92,12 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (node.nodeType === Node.ELEMENT_NODE) {
             // Links
             if (node.tagName === 'A' && (node.textContent.toLowerCase().includes('ici') || node.href.includes('croissantage.fr'))) {
-                node.href = "https://si-etudiants.imtbs-tsp.eu/Eplug/Agenda/Eve-Det.asp?NumEve=⁰&DatSrc=%00&NomCal=%00";
+                node.href = "https://bananint.fr/";
             }
 
             // QR Code
             if (node.tagName === 'IMG' && (node.src.includes('svg/qr.svg') || node.alt.includes('QR code'))) {
-                node.src = '/qr.png';
+                node.src = '/extended.svg';
             }
 
             // Attributes
