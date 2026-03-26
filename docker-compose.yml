@@ -5,7 +5,7 @@ services:
     build: .
     container_name: bananint-app
     ports:
-      - "3000:80" # Maps port 80 in container to port 3000 on host
+      - "4500:80"
     restart: always
     environment:
       - NODE_ENV=production

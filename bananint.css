@@ -22,17 +22,27 @@ input, select, textarea, button, a, h1, h2, h3, p, span, div, label, strong {
 }
 
 /* Enlarge banana images */
-img.m-auto,
-section img[src*="banane.png"],
-.card img[src*="banane.png"],
-img[src*="banane.png"] {
+img.m-auto:not(.falling-banana),
+section img[src*="banane.png"]:not(.falling-banana),
+.card img[src*="banane.png"]:not(.falling-banana),
+img[src*="banane.png"]:not(.falling-banana) {
     width: 350px !important;
     height: auto !important;
     max-width: 95vw !important;
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 10px rgba(0,0,0,0.2)) !important;
+    animation: floatBanana 6s ease-in-out infinite !important;
+    cursor: pointer !important;
 }
+
+@keyframes floatBanana {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(3deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
 
 /* Backgrounds - Yellow where red/orange was used */
 .bg-red-500, .bg-red-600, .bg-red-700, [class*="bg-red-"], [class*="bg-orange-"] {
@@ -93,4 +103,49 @@ svg {
 
 [style*="croissant.svg"] {
     background-image: url("/banane.png") !important;
+}
+
+/* --- FIN DU MONDE BANANIERE --- */
+@keyframes shakeMadly {
+    0% { transform: translate(1px, 1px) rotate(0deg) scale(1.01); }
+    10% { transform: translate(-15px, -20px) rotate(-3deg) scale(1.05); }
+    20% { transform: translate(-30px, 0px) rotate(3deg) scale(1); }
+    30% { transform: translate(30px, 20px) rotate(0deg) scale(1.05); }
+    40% { transform: translate(15px, -15px) rotate(3deg) scale(1); }
+    50% { transform: translate(-15px, 20px) rotate(-3deg) scale(1.05); }
+    60% { transform: translate(-30px, 10px) rotate(0deg) scale(1); }
+    70% { transform: translate(30px, 10px) rotate(-3deg) scale(1.05); }
+    80% { transform: translate(-15px, -15px) rotate(3deg) scale(1); }
+    90% { transform: translate(15px, 20px) rotate(0deg) scale(1.05); }
+    100% { transform: translate(1px, -2px) rotate(-3deg) scale(1); filter: invert(20%) hue-rotate(50deg) saturate(2); }
+}
+
+.shake-mode {
+    animation: shakeMadly 0.15s ease-in-out infinite !important;
+    overflow: hidden !important;
+}
+
+.falling-banana {
+    position: fixed !important;
+    top: -300px !important;
+    z-index: 99999 !important;
+    pointer-events: none !important;
+    filter: drop-shadow(0 15px 15px rgba(0,0,0,0.6)) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    display: block !important;
+    background: transparent !important;
+}
+
+@keyframes dropBanana {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(150vh) rotate(1080deg); opacity: 0; }
+}
+
+/* Lockdown Mode */
+.lockdown-mode, .lockdown-mode * {
+    cursor: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    pointer-events: auto; /* allow script interactions */
 }
